@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
-from decorator import time_track
+from decorator_stopwatch import time_duration
 
 
 class Volatility:
@@ -41,7 +41,7 @@ class Volatility:
         self.volatility = round(((self.max_price - self.min_price) / half_sum) * 100, 2)
 
 
-@time_track
+@time_duration
 def main():
     """
     Вывод трех тикеров с максимальной и трех с минимальной волатильностью
@@ -55,6 +55,7 @@ def main():
     for volatility in volatilities:
         volatility.run()
         result[volatility.file_name] = volatility.volatility
+
     print('Максимальная волатильность:')
     counter = 0
     number_of_max_and_min_volatility = 3
