@@ -9,6 +9,7 @@ class Volatility(threading.Thread):
     """
     Программа для подсчета волатильности в многопоточном режиме на основе входных данных
     """
+
     def __init__(self, file_name, dir_name, lock, result, *args, **kwargs):
         """
         :param file_name: имя файла
@@ -26,6 +27,7 @@ class Volatility(threading.Thread):
     def run(self):
         """
         Запуск программы
+
         :return: None
         """
         self.max_price, self.min_price = 0, 0
@@ -55,6 +57,7 @@ def main():
     """
     Вывод трех тикеров с максимальной и трех с минимальной волатильностью
     Вывод нулевой волатильности
+
     :return: None
     """
     dir = r'trades'
