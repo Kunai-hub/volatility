@@ -7,6 +7,7 @@ class Volatility:
     """
     Программа для подсчета волатильности на основе входных данных
     """
+
     def __init__(self, file_name, dir_name):
         """
         :param file_name: имя файла
@@ -19,6 +20,7 @@ class Volatility:
     def run(self):
         """
         Запуск программы
+
         :return: None
         """
         self.max_price, self.min_price = 0, 0
@@ -46,6 +48,7 @@ def main():
     """
     Вывод трех тикеров с максимальной и трех с минимальной волатильностью
     Вывод нулевой волатильности
+
     :return: None
     """
     dir = r'trades'
