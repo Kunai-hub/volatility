@@ -8,7 +8,7 @@ from decorator_stopwatch import time_duration
 
 class Volatility(threading.Thread):
     """
-    Программа для подсчета волатильности в многопоточном режиме на основе входных данных
+    Программа для подсчета волатильности в многопоточном режиме на основе входных данных.
     """
 
     def __init__(self, file_name, dir_name, lock, result, *args, **kwargs):
@@ -27,7 +27,7 @@ class Volatility(threading.Thread):
 
     def run(self):
         """
-        Запуск программы
+        Запуск программы.
 
         :return: None
         """
@@ -56,8 +56,8 @@ class Volatility(threading.Thread):
 @time_duration
 def main():
     """
-    Вывод трех тикеров с максимальной и трех с минимальной волатильностью
-    Вывод нулевой волатильности
+    Вывод трех тикеров с максимальной и трех с минимальной волатильностью.
+    Вывод нулевой волатильности.
 
     :return: None
     """
